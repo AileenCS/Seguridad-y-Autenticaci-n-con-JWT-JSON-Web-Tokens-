@@ -46,33 +46,27 @@ source .venv/bin/activate
 3. Instalar las dependencias necesarias
 Dentro del entorno virtual, instala Flask y las librerías necesarias:
 
-```bash
-pip install flask flask-jwt-extended bcrypt´´´
 
-
+pip install flask flask-jwt-extended bcrypt
 
 
 4. Crear el archivo de la aplicación Flask
-Usa vim para crear el archivo session.py y agrega el código de tu API Flask:
 
-bash
-Copiar código
 vim session.py
+
 5. Configuración de NGINX
 Accede al archivo de configuración de NGINX:
 
-bash
 
 cd /etc/nginx/
 vim nginx.conf
+
 Agrega las configuraciones necesarias para dirigir las solicitudes a la API de Flask.
 
 6. Reiniciar NGINX
 Guarda los cambios en nginx.conf y reinicia NGINX para aplicar las nuevas configuraciones:
 
-bash
-Copiar código
+
 sudo service nginx restart
 7. Verificar la API en Postman
 Abre Postman y realiza las pruebas de tu API utilizando las rutas que hayas implementado, como /register, /login, /protected, etc.
-
