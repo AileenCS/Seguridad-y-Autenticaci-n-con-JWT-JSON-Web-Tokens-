@@ -11,28 +11,24 @@
 
 ## Pasos para configurar y ejecutar el proyecto
 
-### 1. Iniciar el contenedor de NGINX
 
-Pasos para configurar y ejecutar el proyecto
 1. Iniciar el contenedor de NGINX
 Para iniciar el contenedor de NGINX, usa el siguiente comando:
 
 ´´´bash
+sudo docker start nginx´´´
 
-
-sudo docker start nginx
-
-´´´
 Accede al contenedor de NGINX:
 
-bash
-Copiar código
+´´´bash
 sudo docker exec -it nginx bash
+
+´´´
 Dentro del contenedor, navega a la carpeta donde crearás el proyecto. Por ejemplo:
 
-bash
-Copiar código
+
 cd myproject
+
 2. Configuración del entorno virtual
 Crea un entorno virtual:
 
@@ -42,7 +38,6 @@ python3 -m venv .venv
 Activa el entorno virtual:
 
 En MacOS/Linux:
-bash
 
 source .venv/bin/activate
 
@@ -52,7 +47,11 @@ source .venv/bin/activate
 Dentro del entorno virtual, instala Flask y las librerías necesarias:
 
 ```bash
-pip install flask flask-jwt-extended bcrypt
+pip install flask flask-jwt-extended bcrypt´´´
+
+
+
+
 4. Crear el archivo de la aplicación Flask
 Usa vim para crear el archivo session.py y agrega el código de tu API Flask:
 
